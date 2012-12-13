@@ -1,34 +1,35 @@
-SMS plugin for Phonegap 2.0
+<h1>SMS plugin for Phonegap 2.0</h1>
 By Josep Lluis Monte Galiano
 
 
-Adding the Plugin to your project
+<h1>Adding the Plugin to your project</h1>
 1. Move smsplugin.js to your project's www folder and include a reference to it in your html files.
 2. Add the java files from src to your project's src hierarchy
 3. Reference the plugin in your res/plugins.xml file
 4. Ensure that your manifest contains the necessary permissions to send SMS messages:
 
 
-Using the plugin
+<h1>Using the plugin</h1>
 The plugin creates the object window.plugins.smsPlugin with two method:
 
-send
+<b>send</b>
 
 Send an sms message. For example:
 
-var phone = "555667788";
-var message = "text to message";
-window.plugins.smsPlugin.send(phone, message);
+<code>
+	var phone = "555667788";<br/>
+	var message = "text to message";<br/>
+	window.plugins.smsPlugin.send(phone, message);<br/>
+</code>
 
-
-read
+<b>read</b>
 
 Read list messages from inbox device:
 
-window.plugins.smsPlugin.read
+<code>window.plugins.smsPlugin.read</code>
 
 
-events Success and Error
+<b>events Success and Error</b>
 
 	function init() {
 		...
@@ -46,7 +47,7 @@ events Success and Error
 
 
 
-Licence
+<h1>Licence</h1>
 The MIT License
 
 Copyright (c) 2011 Daniel Shookowsky
