@@ -1,4 +1,4 @@
-<h1>SMS plugin for Phonegap 2.0</h1>
+<h1>Email plugin for Phonegap 2.0</h1>
 By Josep Lluis Monte Galiano
 
 
@@ -10,38 +10,48 @@ By Josep Lluis Monte Galiano
 
 
 <h1>Using the plugin</h1>
-The plugin creates the object window.plugins.smsPlugin with two method:
+The plugin creates the object window.plugins.emailPlugin with two method:
 
-<b>send</b>
+<b>prepareSMTP</b>
 
-Send an sms message. For example:
+Prepare the SMTP server:
 
 <pre>
-var phone = "555667788";
-var message = "text to message";
-window.plugins.smsPlugin.send(phone, message);
+var host = "smtp.gmail.com";
+var port = 465;
+var user = "user@gmail.com";
+var passw = "passw";
+var from = "mail@aaa.com";
+
+window.plugins.emailPlugin.prepareSMTP(host, port, user, passw, from);
 </pre>
 
-<b>read</b>
+<b>sendEmail</b>
 
-Read list messages from inbox device:
+Send an email:
 
-<code>window.plugins.smsPlugin.read</code>
+<pre>
+var to = "mail@aaa.com";
+var subject = "subject";
+var message = "message body";
+
+window.plugins.emailPlugin.sendEmail(to, subject, message);
+</pre>
 
 
 <b>events Success and Error</b>
 
 	function init() {
 		...
-		window.plugins.smsPlugin.onError = onErrorSMS;
-		window.plugins.smsPlugin.onSuccess = onSuccessSMS;
+		window.plugins.emailPlugin.onError = onErrorEmail;
+		window.plugins.emailPlugin.onSuccess = onSuccessEmail;
 	}
 
-	function onErrorSMS(data) {
+	function onErrorEmail(data) {
 		...
 	}
 
-	function onSuccessSMS(data) {
+	function onSuccessEmail() {
 		...
 	}
 
