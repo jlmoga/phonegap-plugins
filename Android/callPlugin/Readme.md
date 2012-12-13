@@ -1,4 +1,4 @@
-<h1>SMS plugin for Phonegap 2.0</h1>
+<h1>Call plugin for Phonegap 2.0</h1>
 By Josep Lluis Monte Galiano
 
 
@@ -10,38 +10,31 @@ By Josep Lluis Monte Galiano
 
 
 <h1>Using the plugin</h1>
-The plugin creates the object <code>window.plugins.smsPlugin</code> with two method:
+The plugin creates the <code>object window.plugins.callPlugin</code> with one method:
 
-<b>send</b>
+<b>call</b>
 
-Send an sms message. For example:
+Call Phone number:
 
 <pre>
-var phone = "555667788";
-var message = "text to message";
-window.plugins.smsPlugin.send(phone, message);
+var number = "555667788";
+window.plugins.callPlugin.call(number);
 </pre>
-
-<b>read</b>
-
-Read list messages from inbox device:
-
-<code>window.plugins.smsPlugin.read</code>
 
 
 <b>events Success and Error</b>
 
 	function init() {
 		...
-		window.plugins.smsPlugin.onError = onErrorSMS;
-		window.plugins.smsPlugin.onSuccess = onSuccessSMS;
+        window.plugins.callPlugin.onError = onErrorCall;
+        window.plugins.callPlugin.onSuccess = onSuccessCall;
 	}
 
-	function onErrorSMS(data) {
+	function onErrorCall(data) {
 		...
 	}
 
-	function onSuccessSMS(data) {
+	function onSuccessCall() {
 		...
 	}
 

@@ -10,7 +10,7 @@ By Josep Lluis Monte Galiano
 
 
 <h1>Using the plugin</h1>
-The plugin creates the object window.plugins.emailPlugin with two method:
+The plugin creates the object <code>window.plugins.emailPlugin</code> with two method:
 
 <b>prepareSMTP</b>
 
