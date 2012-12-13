@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cordova>
+	...
+    <plugins>
+		...
+        <plugin name="SmsPlugin" value="com.moga.plugins.smsplugin.SmsPlugin" />
+    </plugins>
+</cordova>
