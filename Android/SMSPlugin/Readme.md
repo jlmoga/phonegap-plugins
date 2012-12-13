@@ -16,11 +16,11 @@ The plugin creates the object window.plugins.smsPlugin with two method:
 
 Send an sms message. For example:
 
-<pre>
-var phone = "555667788";
-var message = "text to message";
-window.plugins.smsPlugin.send(phone, message);
-</pre>
+<code>
+	var phone = "555667788";<br/>
+	var message = "text to message";<br/>
+	window.plugins.smsPlugin.send(phone, message);<br/>
+</code>
 
 <b>read</b>
 
